@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const ImageDate = () => {
-    return <div>Date</div>
+const ImageDate = ({ dateItem }) => {
+    return <div>{dateItem}</div>
 }
 
 export default ImageDate;

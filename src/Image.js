@@ -1,10 +1,10 @@
 import React from 'react';
-import image from './rwby.jpg';
+// import image from './rwby.jpg';
 
 
-const Image = ({ iamge, imageTitle }) => {
+const Image = ({ imageItem, titleItem }) => {
     return <div>Image
-        <img src={image} alt={imageTitle}/>
+        <img src={imageItem} alt={titleItem}/>
     </div>
 }
 

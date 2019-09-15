@@ -14,7 +14,7 @@ function App() {
   const [descState, setDescState] = useState();
 
   useEffect(() => {
-    axios.get()
+    axios.get(apodApi)
       .then(apodReply => {
         // debugger
         const { date, title, hdurl, explanation } = apodReply.data;
@@ -31,10 +31,10 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app Have fun 🚀!
       </p>
-      <ImageTitle />
-      <ImageDate />
-      <Image />
-      <ImageDescription />
+      <ImageTitle titleItem={titleState}/>
+      <ImageDate dateItem={dateState}/>
+      <Image imageItem={imageState} titleItem={titleState}/>
+      <ImageDescription descItem={descState}/>
     </div>
   );
 }

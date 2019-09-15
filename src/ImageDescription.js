@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const ImageDescription = () => {
-    return <div>Description</div>
+const ImageDescription = ({ descItem }) => {
+    return <div>{descItem}</div>
 }
 
 export default ImageDescription;
