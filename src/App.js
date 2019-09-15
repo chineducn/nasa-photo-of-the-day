@@ -8,12 +8,12 @@ import axios from 'axios';
 
 function App() {
   const apodApi = 'https://api.nasa.gov/planetary/apod?api_key=V1J4M6GlXcTMqo4ieupefSJSF4EiUSdcjjUbufgM';
-    
+
   useEffect(() => {
-    axios.get()
+    axios.get(apodApi)
       .then(apodReply => {
-          debugger
-        })
+        debugger
+      })
   }, []);
 
   const [imageState, setImage] = useState();
