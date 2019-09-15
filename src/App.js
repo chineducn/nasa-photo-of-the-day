@@ -10,9 +10,11 @@ function App() {
   const apodApi = 'https://api.nasa.gov/planetary/apod?api_key=V1J4M6GlXcTMqo4ieupefSJSF4EiUSdcjjUbufgM';
 
   useEffect(() => {
-    axios.get(apodApi)
+    axios.get()
       .then(apodReply => {
         debugger
+        const { date, title, hdurl, explanation } = apodReply.data;
+
       })
   }, []);
 
