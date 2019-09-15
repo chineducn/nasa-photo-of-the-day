@@ -8,20 +8,19 @@ import axios from 'axios';
 
 function App() {
   const apodApi = 'https://api.nasa.gov/planetary/apod?api_key=V1J4M6GlXcTMqo4ieupefSJSF4EiUSdcjjUbufgM';
-
-  useEffect(() => {
-    axios.get()
-      .then(apodReply => {
-        debugger
-        const { date, title, hdurl, explanation } = apodReply.data;
-
-      })
-  }, []);
-
   const [imageState, setImage] = useState();
   const [titleState, setTitleState] = useState();
   const [dateState, setDateState] = useState();
   const [descState, setDescState] = useState();
+
+  useEffect(() => {
+    axios.get()
+      .then(apodReply => {
+        // debugger
+        const { date, title, hdurl, explanation } = apodReply.data;
+
+      })
+  }, []);
 
   return (
     <div className="App">
