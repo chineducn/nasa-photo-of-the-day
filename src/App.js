@@ -4,10 +4,17 @@ import Image from './Image';
 import ImageDate from './ImageDate';
 import ImageTitle from './ImageTitle';
 import ImageDescription from './ImageDescription';
+import axios from 'axios';
 
 function App() {
-
-
+  const apodApi = 'https://api.nasa.gov/planetary/apod?api_key=V1J4M6GlXcTMqo4ieupefSJSF4EiUSdcjjUbufgM';
+    
+  useEffect(() => {
+    axios.get()
+      .then(apodReply => {
+          debugger
+        })
+  }, []);
 
   const [imageState, setImage] = useState();
   const [titleState, setTitleState] = useState();
