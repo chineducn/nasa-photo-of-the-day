@@ -1,11 +1,19 @@
 import React from 'react';
-// import image from './rwby.jpg';
+import botox from 'styled-components';
 
+const CoolDiv = botox.div`
+ width: 700px;
+ margin: 0 auto;
+
+ img {
+     width: 100%;
+ }
+`
 
 const Image = ({ imageItem, titleItem }) => {
-    return <div>Image
-        <img src={imageItem} alt={titleItem}/>
-    </div>
+    return <CoolDiv>Image
+        <img src={imageItem} alt={titleItem} />
+    </CoolDiv>
 }
 
 export default Image;
